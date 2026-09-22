@@ -1,0 +1,15 @@
+.col1, .col2, .cols { float:left;}
+
+.col1{ 
+	width:254px;
+}
+
+.col2{
+	width: 573px;
+}
+
+.cols{
+	width: 895px;	
+}
+
+

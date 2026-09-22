@@ -1,0 +1,485 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+/* Left & Right alignment */
+
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.wrapper {
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+.box {
+	overflow:hidden;
+}
+.clear {
+	clear:both;
+	width: 100%;
+}
+/* Global properties ======================================================== */
+body, html {
+    height: 100%;
+}
+body {
+	overflow:hidden;
+	background-color:#FFF;
+	border:0;
+	font:13px Arial, Helvetica, sans-serif;
+	color:#000;
+	line-height:18px;
+	min-width:940px;
+	min-height:650px;
+}
+/* Global Structure ============================================================= */
+.extra{
+	height: 100%;
+	min-height:750px;
+	margin-bottom: -42px;
+}
+.main {
+	position:relative;
+	margin: 0 auto;
+	width: 940px;
+	height: 570px;
+}
+.block{ 
+	position:relative;
+	margin: 0 auto;
+	width: 940px;
+}
+.page_spinner {
+	position:absolute;
+	background: url(../images/animated_spinner.gif) 50% 50% no-repeat #000;
+	z-index:99;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0
+}
+.gall_spinner {
+	position:relative;
+	background-color:#df1414;
+	width:32px;
+	height:31px;
+	top:0;
+	left:0;
+}
+.gall_spinner span{
+	position:absolute;
+	width:20px;
+	height:20px;
+	left:6px;
+	top:6px;
+	background: url(../images/gall_spinner.gif) 0 0 no-repeat;
+}
+/* ============================= main layout ====================== */
+
+a {
+	color:#FFF;
+	text-decoration: underline;
+	outline:none
+}
+h1 {
+	color:#F30;
+	padding:0 0 0 0;
+}
+h2 {
+	font-size:20px;
+	color: #F30;
+	padding-bottom: 28px;
+	text-transform:uppercase;
+}
+h3 {
+	font-size:18px;
+	color: #F30;
+	padding: 30px 0 12px;
+	text-transform:uppercase;
+}
+h4{
+	color:#F30;
+	font-weight:bold;
+}
+p {
+	padding-bottom:18px;
+}
+b {
+	color: #F30;
+}
+dt{
+	text-transform: uppercase;
+}
+.color1{
+	color:#000;
+}
+.color2{
+	color:#df1414;
+}
+.color2:hover{
+	color:#000;
+}
+ul.list{
+	list-style-type: square;
+	list-style-position: inside;
+}
+/* ============================= header ====================== */
+header {
+	position:relative;
+	height:111px;
+	z-index:1;
+}
+#logo {
+	display:block;
+	text-indent:-9999px;
+	background:url(../images/logo_mbeec.jpg) no-repeat;
+	width:227px;
+	height:111px;
+}
+.menu {
+	position: relative;
+}
+#menu {
+	width: 713px;
+	height: 111px;
+}
+#menu > li {
+	position:relative;
+	float:left;
+	text-align:center;
+	text-transform:uppercase;
+	width: 143px;
+	background:url(../images/menu_stepline.png) right 0 no-repeat;
+}
+#menu .last{
+	background:none;
+	width:141px;
+}
+#menu .last > a span{
+	width: 141px;
+}
+#menu > li > a {
+	display:block;
+	height: 64px;
+	width: 142px;
+	padding-top: 47px;
+	font-size:20px;
+	text-decoration:none;
+	background-color:#000;
+	opacity:0.9;
+}
+#menu >li > a:hover{
+	opacity:0.5;
+}
+#menu > li > a span {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width: 142px;
+	background-color: #000;
+	color:#FFF;
+}
+.submenu_1 {
+	position:absolute;
+	top:111px;
+	left:0;
+	width:142px;
+	background-color:#000;
+	padding:34px 0;
+	z-index: 1;
+}
+.submenu_1 li {
+	position:relative;
+}
+.submenu_1 a {
+	display:block;
+	text-align:center;
+	color: #565656;
+	font-size:20px;
+	line-height:24px;
+	text-decoration:none;
+	color:#fff;
+}
+.submenu_1 li > a:hover  {
+	color:#df1414;
+}
+.submenu_2 {
+	position:absolute;
+	top:-32px;
+	left:142px;
+	width:142px;
+	background-color:#000;
+	padding:34px 0;
+}
+/* ============================= bgStretch ====================== */
+#bgStretch {
+	overflow:hidden;
+	z-index:-1;
+}
+.bgSelector {
+	padding: 7px 0;
+	height:17px;
+	background-color:#111;
+}
+.bgSelector span {
+	color:#fff;
+	font-size: 13px;
+	padding: 9px 11px;
+	background-color:#df1414;
+}
+.bgNav, .bgNav li {
+	cursor:default;
+	display:inline-block;
+	height:6px;
+}
+.bgNav {
+	padding: 7px 13px 0 14px;
+}
+.bgNav li {
+	padding-right:4px;
+}
+.bgNav a {
+	display: block;
+	height: 6px;
+	width: 6px;
+	background: url(../images/bg_selector.jpg) no-repeat scroll right 0 transparent;
+}
+.bgNav a:hover, .bgNav .active a {
+	background-position: left center;
+}
+/* ============================= content ====================== */
+.oswald{
+	font-family: 'Oswald', sans-serif;
+}
+#content {
+	overflow:hidden;
+}
+#content > ul{
+	position:relative;
+	width:940px;
+	height:485px;
+	margin-top: 20px;
+}
+#content > ul > li{
+	position:absolute;
+	height:439px;
+	background: url(../images/bg_plane.png) 0 0 repeat;
+}
+h3 span{
+	color: #fff;
+}
+h3 span b{
+	padding-right: 5px;
+	font-size:13px;
+}
+.contentPad {
+	background:white;
+	width:893px;
+	height:331px;
+	padding: 56px 22px 52px 25px;
+}
+.rBorder{
+	float:left;
+	width: auto;
+	height: 100%;
+	padding-right: 34px;
+	margin-right:30px;
+	background:url(../images/content_stepline.png) right 0 repeat-y;
+}
+.noLine{
+	background:none;
+}
+.pad_bot1{
+	padding-bottom: 5px;
+}
+.pad_bot2{
+	padding-bottom: 9px;
+}
+.pad_top1{
+	padding-top: 49px;
+}
+.imgIndent{
+	padding-right: 20px;
+}
+.rm1, .rm2{
+	font-size: 10px;
+	margin-right:17px;
+	color: #8a8a83;
+	text-transform:uppercase;
+}
+.rm2{
+	color:#fff;
+}
+.rm1:hover, .rm2:hover{
+	color:#df1414;
+}
+.list1 > li{
+	padding-bottom: 2px;
+}
+.list1 > li img {
+	margin: 3px 8px 0 0;
+}
+.address {
+	width:170px;
+}
+/* ============================= gallery ====================== */
+#galleryPreview{
+	overflow:hidden;
+	width:298px;
+	height:277px;
+	margin-right: 14px;
+}
+#galleryPreview li img{
+	position:absolute;
+	top:0;
+	left:0;
+}
+#galleryThumbs{
+	overflow:hidden;
+	margin-bottom: 21px;
+}
+#galleryThumbs li{
+	position:relative;
+	float:left;
+	overflow:hidden;
+	margin: 0 10px 10px 0;
+}
+#galleryThumbs li span{
+	position:absolute;
+	left:0;
+	width:77px;
+	height:65px;
+	background:url(../images/thumb_cover.png) 0 0 no-repeat;
+}
+/* ============================= accordion ====================== */
+#accordion{
+	overflow:hidden;
+	position:relative;
+	top:-10px;
+	font-size: 11px;
+}
+#accordion dt{
+	position:relative;
+	border-top: 1px solid #2d332a;
+}
+.ui-state-hover{
+	background:url(../images/accordeon_sel.png);
+}
+.ui-state-active{
+	background:none;
+}
+#accordion .noLine {
+	border-top: none;
+}
+#accordion dt a{
+	display:block;
+	font-weight:bold;
+	text-decoration:none;
+	padding: 5px 0 6px 7px;
+	color: #F60;
+}
+#accordion dd{
+	height: 148px;
+	overflow:auto;
+}
+#accordion dd p{
+	width: auto;
+	padding: 6px 0 16px 7px;
+}
+
+.ui-icon {
+	position:absolute;
+	left: 220px;
+	top: 12px;
+	width: 9px;
+	height: 5px;
+}
+.ui-icon-plus{
+	background:url(../images/accordion_arr_pic.png) 0 0 no-repeat;
+}
+.ui-icon-minus{
+	background:url(../images/accordion_arr_pic_active.png) 0 0 no-repeat;
+}
+
+/* ============================= footer ====================== */
+footer {
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	overflow:hidden;
+	width:100%;
+	height:25px;
+	background-color: #000;
+	padding-top:17px;
+	color:#5a5a5a;
+	font-size: 10px;
+	line-height: 9px;
+}
+footer li{
+	display:inline-block;
+	padding: 0 6px;
+	border-right: 1px solid #5a5a5a;
+}
+footer .last{
+	border:none;
+	padding: 0 0 0 6px;
+}
+footer a {
+	color:#5a5a5a;
+	text-decoration:none;	
+}
+footer a:hover {
+	color:#fff;
+	text-decoration:underline;	
+}
+/* ============================= forms ============================= */
+
+#form1 {
+}
+#form1 input {
+	border:1px solid #323232;
+	background-color:#252525;
+	padding:8px 0 8px 10px;
+	width:348px;
+	box-shadow:none;
+}
+#form1 textarea {
+	resize: none;
+	border:1px solid #323232;
+	background-color:#252525;
+	padding:8px 0 8px 10px;
+	width:545px;
+	height:130px;
+	overflow:auto;
+
+}
+#form1 label {
+	position:relative;
+	display:inline-block;
+	min-height:47px;
+}
+#form1 .error, #form1 .empty {
+	position:relative;
+	top: -3px;
+	display:none;
+	font-size:11px;
+	color:#868883;
+}
+.btns a {
+	display:inline-block;
+	margin-right:17px;
+	font-size: 10px;
+	color:#fff;
+}
+.btns a:hover {
+	color:#df1414;
+}
+/* Form defaults */
+input, select, textarea {
+	font:13px Arial, Helvetica, sans-serif;
+	color: #868883;
+	vertical-align:middle;
+	font-weight:normal;
+}

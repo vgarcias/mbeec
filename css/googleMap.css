@@ -1,0 +1,10 @@
+body{
+	background-color:#999;
+}
+
+.google_map{
+    margin: 0;
+    width: 890px;
+    height: 290px;
+    background: #FFF;
+}
